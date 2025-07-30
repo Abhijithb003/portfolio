@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abhijith B | Software Developer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="loading-screen">
+    <div class="loader">
+      <div class="loader-inner">
+        <div class="loader-line-wrap">
+          <div class="loader-line"></div>
+        </div>
+        <div class="loader-line-wrap">
+          <div class="loader-line"></div>
+        </div>
+        <div class="loader-line-wrap">
+          <div class="loader-line"></div>
+        </div>
+        <div class="loader-line-wrap">
+          <div class="loader-line"></div>
+        </div>
+        <div class="loader-line-wrap">
+          <div class="loader-line"></div>
+        </div>
+      </div>
+    </div>
+    <div class="loading-text">Loading Portfolio...</div>
+  </div>
+
+  <!-- Cursor -->
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+
+  <!-- Progress Bar -->
+  <div class="progress-bar"></div>
+
+  <!-- Floating Elements -->
+  <div class="floating-elements">
+    <div class="floating-element" style="--delay: 0s; --x: 10%; --y: 20%;">
+      <i class="fas fa-code"></i>
+    </div>
+    <div class="floating-element" style="--delay: 2s; --x: 85%; --y: 15%;">
+      <i class="fas fa-laptop-code"></i>
+    </div>
+    <div class="floating-element" style="--delay: 4s; --x: 90%; --y: 70%;">
+      <i class="fas fa-mobile-alt"></i>
+    </div>
+    <div class="floating-element" style="--delay: 1s; --x: 15%; --y: 80%;">
+      <i class="fas fa-database"></i>
+    </div>
+  </div>
+
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <a href="#" class="logo">
+          <span class="logo-text">Abhijith B</span>
+          <div class="logo-underline"></div>
+        </a>
+        <div class="nav-controls">
+          <nav>
+            <a href="#about" class="nav-link">
+              <span class="nav-text">About</span>
+              <div class="nav-hover-bg"></div>
+            </a>
+            <a href="#projects" class="nav-link">
+              <span class="nav-text">Projects</span>
+              <div class="nav-hover-bg"></div>
+            </a>
+            <a href="#education" class="nav-link">
+              <span class="nav-text">Education</span>
+              <div class="nav-hover-bg"></div>
+            </a>
+            <a href="#skills" class="nav-link">
+              <span class="nav-text">Skills</span>
+              <div class="nav-hover-bg"></div>
+            </a>
+            <a href="#achievements" class="nav-link">
+              <span class="nav-text">Achievements</span>
+              <div class="nav-hover-bg"></div>
+            </a>
+            <a href="#contact" class="nav-link">
+              <span class="nav-text">Contact</span>
+              <div class="nav-hover-bg"></div>
+            </a>
+          </nav>
+          <div class="header-actions">
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+              <div class="theme-icon">
+                <i class="fas fa-moon"></i>
+              </div>
+              <div class="theme-bg"></div>
+            </button>
+            <a href="assets/abhi_cv.pdf" class="download-cv" download>
+              <span class="cv-text">
+                <i class="fas fa-download"></i> Download CV
+              </span>
+              <div class="cv-bg"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="about" class="hero">
+    <div class="hero-bg-animation"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="profile-section animate-on-scroll">
+          <div class="profile-pic-container">
+            <img class="profile-pic" src="assets/profile.jpg" alt="Abhijith B - Software Developer" onclick="openModal()">
+            <div class="profile-ring"></div>
+            <div class="profile-ring profile-ring-2"></div>
+          </div>
+        </div>
+        
+        <div class="hero-text animate-on-scroll" style="--delay: 0.2s;">
+          <h1 class="hero-title">
+            <span class="title-line">Hello, I'm</span>
+            <span class="title-name">Abhijith B</span>
+            <div class="title-underline"></div>
+          </h1>
+          <p class="subtitle">
+            <span class="typewriter">Software Developer & MCA Graduate</span>
+          </p>
+          <p class="description animate-on-scroll" style="--delay: 0.4s;">
+            Passionate software developer with expertise in Java, Python, Flask, and modern web technologies. 
+            I specialize in building efficient, user-friendly applications and have experience developing 
+            real-time systems including face recognition attendance systems, client communication portals, 
+            and e-commerce platforms. Always eager to learn and contribute to impactful software solutions.
+          </p>
+          <div class="hero-buttons animate-on-scroll" style="--delay: 0.6s;">
+            <a href="#projects" class="btn-primary">
+              <span>View My Work</span>
+              <div class="btn-bg"></div>
+            </a>
+            <a href="#contact" class="btn-secondary">
+              <span>Get In Touch</span>
+              <div class="btn-bg"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <h2 class="section-title">
+          <span class="title-text">Featured Projects</span>
+          <div class="title-decoration"></div>
+        </h2>
+        <p class="section-subtitle">Showcasing my technical skills through real-world applications</p>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card animate-on-scroll clickable" style="--delay: 0.1s;" onclick="window.open('https://github.com/Abhijithb003/SCANFI', '_blank')">
+          <div class="project-image">
+            <div class="project-bg"></div>
+            <i class="fas fa-user-check project-icon"></i>
+            <div class="project-overlay">
+              <div class="project-links">
+                <div class="project-link" title="View on GitHub">
+                  <i class="fab fa-github"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <h3 class="project-title">SCANFI</h3>
+              <span class="project-year">2025</span>
+            </div>
+            <p class="project-description">
+              Advanced face recognition-based attendance system built with Python, Flask, and OpenCV. 
+              Features secure Wi-Fi validation and real-time face matching for accurate attendance tracking.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Flask</span>
+              <span class="tech-tag">OpenCV</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card animate-on-scroll" style="--delay: 0.2s;">
+          <div class="project-image">
+            <div class="project-bg"></div>
+            <i class="fas fa-gavel project-icon"></i>
+            <div class="project-overlay">
+              <div class="project-links">
+                <span class="project-link disabled" title="Repository not available">
+                  <i class="fas fa-lock"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <h3 class="project-title">DEJUR</h3>
+              <span class="project-year">2023</span>
+            </div>
+            <p class="project-description">
+              Professional communication platform connecting advocates and clients. 
+              Streamlines case registration, participation requests, and legal documentation management.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Web Dev</span>
+              <span class="tech-tag">Database</span>
+              <span class="tech-tag">UI/UX</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card animate-on-scroll" style="--delay: 0.3s;">
+          <div class="project-image">
+            <div class="project-bg"></div>
+            <i class="fas fa-shopping-cart project-icon"></i>
+            <div class="project-overlay">
+              <div class="project-links">
+                <span class="project-link disabled" title="Repository not available">
+                  <i class="fas fa-lock"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <h3 class="project-title">Neighbour Cart</h3>
+              <span class="project-year">2022</span>
+            </div>
+            <p class="project-description">
+              Local e-commerce marketplace connecting neighborhood shops with customers. 
+              Built using PHP, HTML, and MySQL with comprehensive inventory management.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">PHP</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">E-commerce</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="section alternate-bg">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <h2 class="section-title">
+          <span class="title-text">Education Journey</span>
+          <div class="title-decoration"></div>
+        </h2>
+        <p class="section-subtitle">Academic foundation in computer science and applications</p>
+      </div>
+      <div class="education-timeline">
+        <div class="timeline-line"></div>
+        
+        <div class="education-item animate-on-scroll" style="--delay: 0.1s;">
+          <div class="timeline-dot"></div>
+          <div class="education-content">
+            <div class="education-year">2023–2025</div>
+            <h3 class="education-degree">Master of Computer Applications (MCA)</h3>
+            <div class="education-school">Mar Thoma Institute of IT, Ayur</div>
+            <div class="education-grade">68%</div>
+          </div>
+        </div>
+
+        <div class="education-item animate-on-scroll" style="--delay: 0.2s;">
+          <div class="timeline-dot"></div>
+          <div class="education-content">
+            <div class="education-year">2020–2023</div>
+            <h3 class="education-degree">Bachelor of Science in Computer Science</h3>
+            <div class="education-school">CAS Adoor</div>
+            <div class="education-grade">65%</div>
+          </div>
+        </div>
+
+        <div class="education-item animate-on-scroll" style="--delay: 0.3s;">
+          <div class="timeline-dot"></div>
+          <div class="education-content">
+            <div class="education-year">2018–2020</div>
+            <h3 class="education-degree">Higher Secondary Education</h3>
+            <div class="education-school">NSS HSS Thattil</div>
+            <div class="education-grade">83%</div>
+          </div>
+        </div>
+
+        <div class="education-item animate-on-scroll" style="--delay: 0.4s;">
+          <div class="timeline-dot"></div>
+          <div class="education-content">
+            <div class="education-year">2018</div>
+            <h3 class="education-degree">Secondary School Leaving Certificate</h3>
+            <div class="education-school">St. George Mount HS</div>
+            <div class="education-grade">95%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <h2 class="section-title">
+          <span class="title-text">Technical Skills</span>
+          <div class="title-decoration"></div>
+        </h2>
+        <p class="section-subtitle">Programming languages and technologies I work with</p>
+      </div>
+      <div class="skills-container">
+        <div class="skills-grid">
+          <div class="skill-item animate-on-scroll" style="--delay: 0.1s;">
+            <div class="skill-icon">
+              <i class="fab fa-java"></i>
+            </div>
+            <div class="skill-name">Java</div>
+            <div class="skill-level">
+              <div class="skill-progress" data-progress="85"></div>
+            </div>
+            <div class="skill-percentage">85%</div>
+          </div>
+
+          <div class="skill-item animate-on-scroll" style="--delay: 0.2s;">
+            <div class="skill-icon">
+              <i class="fab fa-python"></i>
+            </div>
+            <div class="skill-name">Python</div>
+            <div class="skill-level">
+              <div class="skill-progress" data-progress="90"></div>
+            </div>
+            <div class="skill-percentage">90%</div>
+          </div>
+
+          <div class="skill-item animate-on-scroll" style="--delay: 0.3s;">
+            <div class="skill-icon">
+              <i class="fas fa-flask"></i>
+            </div>
+            <div class="skill-name">Flask</div>
+            <div class="skill-level">
+              <div class="skill-progress" data-progress="80"></div>
+            </div>
+            <div class="skill-percentage">80%</div>
+          </div>
+
+          <div class="skill-item animate-on-scroll" style="--delay: 0.4s;">
+            <div class="skill-icon">
+              <i class="fab fa-html5"></i>
+            </div>
+            <div class="skill-name">HTML</div>
+            <div class="skill-level">
+              <div class="skill-progress" data-progress="95"></div>
+            </div>
+            <div class="skill-percentage">95%</div>
+          </div>
+
+          <div class="skill-item animate-on-scroll" style="--delay: 0.5s;">
+            <div class="skill-icon">
+              <i class="fab fa-css3-alt"></i>
+            </div>
+            <div class="skill-name">CSS</div>
+            <div class="skill-level">
+              <div class="skill-progress" data-progress="90"></div>
+            </div>
+            <div class="skill-percentage">90%</div>
+          </div>
+
+          <div class="skill-item animate-on-scroll" style="--delay: 0.6s;">
+            <div class="skill-icon">
+              <i class="fab fa-js-square"></i>
+            </div>
+            <div class="skill-name">JavaScript</div>
+            <div class="skill-level">
+              <div class="skill-progress" data-progress="75"></div>
+            </div>
+            <div class="skill-percentage">75%</div>
+          </div>
+
+          <div class="skill-item animate-on-scroll" style="--delay: 0.7s;">
+            <div class="skill-icon">
+              <i class="fab fa-git-alt"></i>
+            </div>
+            <div class="skill-name">Git</div>
+            <div class="skill-level">
+              <div class="skill-progress" data-progress="85"></div>
+            </div>
+            <div class="skill-percentage">85%</div>
+          </div>
+
+          <div class="skill-item animate-on-scroll" style="--delay: 0.8s;">
+            <div class="skill-icon">
+              <i class="fas fa-database"></i>
+            </div>
+            <div class="skill-name">MySQL</div>
+            <div class="skill-level">
+              <div class="skill-progress" data-progress="80"></div>
+            </div>
+            <div class="skill-percentage">80%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="achievements" class="section alternate-bg">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <h2 class="section-title">
+          <span class="title-text">Achievements</span>
+          <div class="title-decoration"></div>
+        </h2>
+        <p class="section-subtitle">Milestones and accomplishments in my academic and professional journey</p>
+      </div>
+      <div class="achievements-grid">
+        <div class="achievement-item animate-on-scroll" style="--delay: 0.1s;">
+          <div class="achievement-icon">
+            <i class="fas fa-certificate"></i>
+            <div class="icon-bg"></div>
+          </div>
+          <div class="achievement-content">
+            <h3 class="achievement-title">Python Full Stack Certification</h3>
+            <p class="achievement-text">Completed certified Python Full Stack development course with hands-on project experience and industry-standard practices.</p>
+          </div>
+        </div>
+
+        <div class="achievement-item animate-on-scroll" style="--delay: 0.2s;">
+          <div class="achievement-icon">
+            <i class="fas fa-code"></i>
+            <div class="icon-bg"></div>
+          </div>
+          <div class="achievement-content">
+            <h3 class="achievement-title">Library Management System</h3>
+            <p class="achievement-text">Developed comprehensive library management system during B.Sc. program with advanced features and user-friendly interface.</p>
+          </div>
+        </div>
+
+        <div class="achievement-item animate-on-scroll" style="--delay: 0.3s;">
+          <div class="achievement-icon">
+            <i class="fas fa-presentation"></i>
+            <div class="icon-bg"></div>
+          </div>
+          <div class="achievement-content">
+            <h3 class="achievement-title">AI in Healthcare Seminar</h3>
+            <p class="achievement-text">Presented technical seminar on "AI in Healthcare" showcasing research capabilities and presentation skills.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <h2 class="section-title">
+          <span class="title-text">Get In Touch</span>
+          <div class="title-decoration"></div>
+        </h2>
+        <p class="section-subtitle">Let's connect and discuss opportunities</p>
+      </div>
+      <div class="contact-content">
+        <div class="contact-info animate-on-scroll" style="--delay: 0.1s;">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+              <div class="icon-bg"></div>
+            </div>
+            <div class="contact-details">
+              <span class="contact-label">Email</span>
+              <a href="mailto:abhi@example.com" class="contact-link">abhi@example.com</a>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+              <div class="icon-bg"></div>
+            </div>
+            <div class="contact-details">
+              <span class="contact-label">Phone</span>
+              <span class="contact-text">+91-98765-43210</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="social-links animate-on-scroll" style="--delay: 0.2s;">
+          <a href="https://www.linkedin.com/in/abhijith-b-750341338" target="_blank" class="social-link linkedin">
+            <i class="fab fa-linkedin-in"></i>
+            <div class="social-bg"></div>
+            <span class="social-tooltip">LinkedIn</span>
+          </a>
+          <a href="https://github.com/Abhijithb003" target="_blank" class="social-link github">
+            <i class="fab fa-github"></i>
+            <div class="social-bg"></div>
+            <span class="social-tooltip">GitHub</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content animate-on-scroll">
+        <p>&copy; 2025 Abhijith B. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Profile Modal -->
+  <div id="imgModal" class="modal" onclick="closeModal()">
+    <div class="modal-content-wrapper">
+      <img class="modal-content" id="modalImage" alt="Abhijith B Profile">
+      <button class="modal-close" onclick="closeModal()">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+  </div>
+
+  <script>
+    // Loading Screen
+    window.addEventListener('load', function() {
+      setTimeout(() => {
+        document.getElementById('loading-screen').style.opacity = '0';
+        setTimeout(() => {
+          document.getElementById('loading-screen').style.display = 'none';
+          document.body.style.overflow = 'auto';
+        }, 500);
+      }, 2000);
+    });
+
+    // Custom Cursor
+    const cursor = document.querySelector('.cursor');
+    const cursorFollower = document.querySelector('.cursor-follower');
+
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+      
+      setTimeout(() => {
+        cursorFollower.style.left = e.clientX + 'px';
+        cursorFollower.style.top = e.clientY + 'px';
+      }, 100);
+    });
+
+    // Cursor interactions
+    const interactiveElements = document.querySelectorAll('a, button, .project-card, .skill-item');
+    interactiveElements.forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        cursor.classList.add('cursor-hover');
+        cursorFollower.classList.add('cursor-hover');
+      });
+      el.addEventListener('mouseleave', () => {
+        cursor.classList.remove('cursor-hover');
+        cursorFollower.classList.remove('cursor-hover');
+      });
+    });
+
+    // Progress Bar
+    window.addEventListener('scroll', () => {
+      const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+      document.querySelector('.progress-bar').style.width = scrolled + '%';
+    });
+
+    // Theme Toggle
+    function toggleTheme() {
+      document.body.classList.toggle('dark-mode');
+      const icon = document.querySelector('.theme-toggle i');
+      
+      if (document.body.classList.contains('dark-mode')) {
+        icon.className = 'fas fa-sun';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        icon.className = 'fas fa-moon';
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    // Modal Functions
+    function openModal() {
+      const modal = document.getElementById('imgModal');
+      const img = document.querySelector('.profile-pic');
+      const modalImg = document.getElementById('modalImage');
+      modal.style.display = 'flex';
+      modalImg.src = img.src;
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      document.getElementById('imgModal').style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+
+    // Scroll Animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Skill Progress Animation
+    const skillObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const progress = entry.target.dataset.progress;
+          entry.target.style.width = progress + '%';
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.skill-progress').forEach(el => {
+      skillObserver.observe(el);
+    });
+
+    // Smooth Scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Typewriter Effect
+    function typeWriter(element, text, speed = 100) {
+      let i = 0;
+      element.innerHTML = '';
+      function type() {
+        if (i < text.length) {
+          element.innerHTML += text.charAt(i);
+          i++;
+          setTimeout(type, speed);
+        }
+      }
+      type();
+    }
+
+    // Initialize typewriter when element is visible
+    const typewriterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const element = entry.target;
+          const text = element.textContent;
+          setTimeout(() => {
+            typeWriter(element, text, 100);
+          }, 1000);
+          typewriterObserver.unobserve(element);
+        }
+      });
+    });
+
+    document.querySelectorAll('.typewriter').forEach(el => {
+      typewriterObserver.observe(el);
+    });
+
+    // Load saved theme
+    document.addEventListener('DOMContentLoaded', function() {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+        document.querySelector('.theme-toggle i').className = 'fas fa-sun';
+      }
+    });
+
+    // Parallax Effect for floating elements
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      const parallax = document.querySelectorAll('.floating-element');
+      const speed = 0.5;
+
+      parallax.forEach(element => {
+        const yPos = -(scrolled * speed);
+        element.style.transform = `translateY(${yPos}px)`;
+      });
+    });
+  </script>
+</body>
+</html>
